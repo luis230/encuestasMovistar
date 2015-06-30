@@ -1,0 +1,36 @@
+<form id="fecha" name="fecha" ng-controller="reporteController as rteCtrl" 
+    ng-submit="fecha.$valid && rteCtrl.generaReporte($event)" novalidate>
+
+    <h4>Fecha Inicio : </h4>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="input-group">
+              <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="fechaInicio" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+    </div>
+
+    <h4>Fecha Fin : </h4>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="input-group">
+                    <input type="text" class="form-control" datepicker-popup="{{formatFin}}" ng-model="fechaFin" is-open="openedFin" datepicker-options="dateOptions" ng-required="true" close-text="Close"/>
+
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="openFechaFin($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+    </div>
+
+    <fieldset class="form-group">
+        <input type="submit" class="btn btn-primary pull-right" value="Generar Reporte" />
+    </fieldset> 
+    <div ng-show="muestraTabla">
+        <div tabla></div>
+    </div>
+
+</form>

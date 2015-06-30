@@ -1,0 +1,70 @@
+<div class="btn-group">
+	<button id="mostrarDatosOficina" class="btn">Datos encuesta callCenter</button>
+	<button id="mostrarDatosCall" class="btn">Datos encuesta oficina</button>
+</div>
+<div id="tablaDatosOficina">
+	<h4 class="titulo">
+		tabla de datos de oficina
+	</h4>
+	<div class="containerTable">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<td>Pregunta 1</td>
+					<td>Pregunta 2</td>
+					<td>Pregunta 3</td>
+					<td>Pregunta 4</td>
+					<td>Pregunta 5</td>
+					<td>Comentarios</td>
+					<td>Fecha</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="datoOficina in datosOficina" class="success">
+					<td>{{datoOficina.Pregunta1}}</td>
+					<td>{{datoOficina.Pregunta2}}</td>
+					<td>{{datoOficina.Pregunta3}}</td>
+					<td>{{datoOficina.Pregunta4}}</td>
+					<td>{{datoOficina.Pregunta5}}</td>
+					<td>{{datoOficina.Pregunta6}}</td>
+					<td>{{datoOficina.Fecha}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<button class="btn btn-default btn-movistar" ng-click="exportarDatosOficina()">
+		exportar datos Oficina
+	</button>
+</div>
+<div id="tablaDatosCall">
+	<h4 class="titulo">
+		tabla de datos del CallCenter
+	</h4>
+	<div class="containerTable">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<td>Pregunta 1</td>
+					<td>Pregunta 2</td>
+					<td>Pregunta 3</td>
+					<td>Pregunta 4</td>
+					<td>Comentarios</td>
+					<td>Fecha</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="datoCall in datosCall" class="success">
+					<td>{{datoCall.Pregunta1}}</td>
+					<td>{{datoCall.Pregunta2}}</td>
+					<td>{{datoCall.Pregunta3}}</td>
+					<td>{{datoCall.Pregunta4}}</td>
+					<td>{{datoCall.Comentarios}}</td>
+					<td>{{datoCall.Fecha}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<button class="btn btn-default btn-movistar" ng-click="exportarDatosCall()">
+		exportar datos Call
+	</button>
+</div>

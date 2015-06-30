@@ -1,0 +1,30 @@
+<section>
+    <ul class="nav nav-pills">
+        <li ng-class="{ active:tab.isSet(1) }">
+            <a href ng-click="tab.setTab(1)">Reporte</a>
+        </li>
+        <li ng-class="{ active:tab.isSet(2) }">
+            <a href ng-click="tab.setTab(2)">Opcion 2</a>
+        </li>
+        <li ng-class="{ active:tab.isSet(3) }">
+            <a href ng-click="tab.setTab(3)">Opcion 3</a>
+        </li>
+        <li ng-class="{ active:tab.isSet(4) }">
+            <a href ng-click="tab.setTab(4)">Opcion 4</a>
+        </li>
+    </ul>
+
+
+      <!-- Generar Reportes  -->
+    <div reporte ng-show="tab.isSet(1)"></div>
+
+    <!--  Crear  -->
+    <opcion2 ng-show="tab.isSet(2)"></opcion2>
+
+    <!--  Modificar  -->
+    <div opcion-l ng-show="tab.isSet(3)"></div>
+
+    <!--  Eliminar  -->
+    <div opcion-n ng-show="tab.isSet(4)"></div>
+
+</section>
